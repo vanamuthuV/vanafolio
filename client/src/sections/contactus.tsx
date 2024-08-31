@@ -4,9 +4,9 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 
 export const ContactUs = () => {
-  const name = useRef('');
-  const email = useRef('');
-  const messages = useRef('');
+ const name = useRef<HTMLInputElement>(null);
+ const email = useRef<HTMLInputElement>(null);
+ const messages = useRef<HTMLTextAreaElement>(null);
 
   interface AlertMessage {
     message: string;
@@ -20,7 +20,7 @@ export const ContactUs = () => {
   });
 
   const SubmitHandler = async () => {
-    if (messages.current.value && email.current.value && name.current.value) {
+    if (messages.current?.value && email.current?.value && name.current?.value) {
       try {
         const response = await axios.post("/contact", {
           name: name.current.value,
