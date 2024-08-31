@@ -2,25 +2,34 @@ import { useRef, useState } from "react";
 import axios from "../../api/axios";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
+import { AlertColor } from "@mui/material/Alert";
 
 export const ContactUs = () => {
- const name = useRef<HTMLInputElement>(null);
- const email = useRef<HTMLInputElement>(null);
- const messages = useRef<HTMLTextAreaElement>(null);
+  const name = useRef<HTMLInputElement>(null);
+  const email = useRef<HTMLInputElement>(null);
+  const messages = useRef<HTMLTextAreaElement>(null);
 
   interface AlertMessage {
     message: string;
-    variant: string;
+    variant: AlertColor;
   }
 
   const [alert, setAlert] = useState<boolean>(false);
   const [alertmessage, setAlertMessage] = useState<AlertMessage>({
-    variant: "",
+    variant: 'info',
     message: "",
   });
 
+  const isValidAlertColor = (value: string): value is AlertColor => {
+    return ["success", "info", "warning", "error"].includes(value);
+  };
+
   const SubmitHandler = async () => {
-    if (messages.current?.value && email.current?.value && name.current?.value) {
+    if (
+      messages.current?.value &&
+      email.current?.value &&
+      name.current?.value
+    ) {
       try {
         const response = await axios.post("/contact", {
           name: name.current.value,
@@ -33,7 +42,7 @@ export const ContactUs = () => {
         setAlertMessage((prev) => ({
           ...prev, // Spread the previous state to keep any other properties intact
           message: message,
-          variant: variant,
+          variant: isValidAlertColor(variant) ? variant : "info",
         }));
 
         setAlert(true);
