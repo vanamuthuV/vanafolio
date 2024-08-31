@@ -1,8 +1,10 @@
+import Resume from "../../public/Vanamuthu V Resume.pdf"
+
 export const Home = () => {
   return (
     <div
       id="home"
-      className="relative bg-[#F5F5F5] w-full h-screen flex flex-col items-center justify-center"
+      className="relative bg-[#F5F5F5] w-full flex flex-col items-center justify-center pt-40 pb-40 max-md:pb-20"
     >
       <div className="absolute left-0 flex flex-col gap-3 p-5 bg-white rounded-tr-lg rounded-br-lg shadow-lg max-md:hidden">
         <a href="https://www.linkedin.com/in/vanamuthuv">
@@ -119,12 +121,27 @@ export const Home = () => {
           A Result-Oriented Web Developer building and managing Websites and Web
           Applications that leads to the success of the overall product{" "}
         </p>
-        <a
-          href="#project"
-          className="bg-[#7843e9] text-[#F5F5F5] py-3.5 px-20 text-xl font-bold tracking-wider rounded-lg mt-12 max-md:px-12 max-md:py-3"
-        >
-          PROJECTS
-        </a>
+        <div className="flex flex-row items-center mt-6 max-md:flex-wrap max-md:justify-center">
+          <a
+            href="#project"
+            className="bg-[#7843e9] text-[#F5F5F5] py-3 px-14 text-xl font-bold tracking-wider rounded-lg  max-md:px-10 max-md:py-3 m-6"
+          >
+            PROJECTS
+          </a>
+          <a href={Resume} download={"Vanamuthu V.pdf"}>
+            <button className="py-3 px-14 max-md:px-10 max-md:py-3 text-[#7843e9] bg-[#f5f5f5] border border-[#7843e9] rounded-lg focus:outline-none flex flex-row items-center  justify-around text-xl font-bold tracking-wider m-6">
+              Resume{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#7843e9"
+                className="w-5 h-5 ml-2"
+              >
+                <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+              </svg>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

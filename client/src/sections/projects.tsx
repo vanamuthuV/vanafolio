@@ -133,7 +133,7 @@ export const Projects = () => {
                   <a href={project.link}>
                     <button
                       disabled={project.id == 5 ? true : false}
-                      className={`flex flex-row items-center justify-center py-2 px-8 max-md:px-6 max-md:text-xs bg-[#7742e7] text-[#fbfaf9] tracking-wider font-bold rounded-md mt-5 ${
+                      className={`flex flex-row items-center justify-center py-2 px-8 max-md:px-5 max-md:text-xs bg-[#7742e7] text-[#fbfaf9] tracking-wider font-bold rounded-md mt-5 ${
                         project.id == 5 && "cursor-not-allowed"
                       }`}
                     >
@@ -149,7 +149,7 @@ export const Projects = () => {
                     </button>
                   </a>
                   <a href={project.repo}>
-                    <button className="flex flex-row items-center justify-center py-2 px-8 max-md:px-6 max-md:text-xs bg-[#f6f8fa] text-[#24292e] border border-[#7742e7] tracking-wider font-bold rounded-md mt-5">
+                    <button className="flex flex-row items-center justify-center py-2 px-8 max-md:px-5 max-md:text-xs bg-[#f6f8fa] text-[#24292e] border border-[#7742e7] tracking-wider font-bold rounded-md mt-5">
                       VIEW REPO
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

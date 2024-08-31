@@ -1,3 +1,5 @@
+import Resume from "../../public/Vanamuthu V Resume.pdf"
+
 export const GetToKnowMe = () => {
   const Skills = [
     "HTML",
@@ -15,6 +17,7 @@ export const GetToKnowMe = () => {
     "MUI",
     "GIT",
     "Github",
+    "POSTMAN",
     "Responsive Design",
   ];
 
@@ -63,12 +66,27 @@ export const GetToKnowMe = () => {
           for programming insights and industry trends. Let’s create something
           impactful together!
         </p>
-        <a href="#contact">
-          {" "}
-          <button className="py-3.5 px-12 bg-[#7742e7] text-[#fbfaf9] tracking-wider font-bold rounded-md mt-10 max-md:px-8 max-md:py-2.5">
-            CONTACT
-          </button>
-        </a>
+        <div className="flex flex-row items-center justify-start mt-10">
+          <a href="#contact">
+            {" "}
+            <button className="py-3.5 px-12 text-sm bg-[#7742e7] text-[#fbfaf9] tracking-wider font-bold rounded-md max-md:px-8 max-md:py-2.5">
+              CONTACT
+            </button>
+          </a>
+          <a href={Resume} download={"Vanamuthu V.pdf"}>
+            <button className="py-3.5 px-9 max-md:px-5 max-md:py-2.5 text-[#7843e9] bg-[#f5f5f5] border border-[#7843e9] rounded-md focus:outline-none flex flex-row items-center  justify-around text-sm font-bold tracking-wider ml-5">
+              Resume{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#7843e9"
+                className="w-5 h-5 ml-2"
+              >
+                <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+              </svg>
+            </button>
+          </a>
+        </div>
       </div>
       <div className="flex flex-col items-start w-2/4 mx-10 max-md:w-full max-md:mx-0 max-md:mt-10">
         <h1 className="w-full mb-10 text-2xl font-bold text-center max-md:text-start">
