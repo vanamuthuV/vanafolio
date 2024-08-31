@@ -15,6 +15,7 @@ app.use(
     origin: BaseURL,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
+    allowedHeaders: ["Origin", "Content-Type", "Authorization"], // Allowed headers
   })
 );
 
