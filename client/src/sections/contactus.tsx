@@ -4,9 +4,9 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 
 export const ContactUs = () => {
-  const name = useRef<HTMLInputElement | string>('');
-  const email = useRef<HTMLInputElement | string>('');
-  const messages = useRef<HTMLTextAreaElement | string>('');
+  const name = useRef('');
+  const email = useRef('');
+  const messages = useRef('');
 
   interface AlertMessage {
     message: string;
