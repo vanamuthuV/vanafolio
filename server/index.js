@@ -1,17 +1,22 @@
 import express from "express";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 
-
 // const BaseURL = "http://localhost:5173";
-const BaseURL = "https://vanafolio.vercel.app/";
+const BaseURL = "https://vanafolio.vercel.app";
 
-app.use(cors({ origin: BaseURL, credentials: true }));
+app.use(
+  cors({
+    origin: BaseURL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(express.json()); // To parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // To parse URL-encoded bodies
@@ -62,7 +67,7 @@ app.post("/contact", async (req, res) => {
       console.log(error.message);
       res.json({
         message:
-         "Error sending message. Please try again or email us at vanamuthuvjob@gmail.com.",
+          "Error sending message. Please try again or email us at vanamuthuvjob@gmail.com.",
         variant: "error",
       });
     });
