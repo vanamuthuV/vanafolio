@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 
 
-const BaseURL = "http://localhost:5173";
+// const BaseURL = "http://localhost:5173";
+const BaseURL = "https://vanafolio.vercel.app/";
 
 app.use(cors({ origin: BaseURL, credentials: true }));
 
