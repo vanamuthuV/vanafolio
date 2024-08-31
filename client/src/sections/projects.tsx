@@ -92,7 +92,7 @@ export const Projects = () => {
                     {project.name}
                   </h1>
                 </div>
-                <div className="relative w-[500px] h-[281px] group max-md:w-[400px] max-md:h-[224px]">
+                <div className="relative w-[500px] h-[281px] group max-md:w-5/6 max-md:h-[224px]">
                   <img
                     className={`absolute inset-0 object-contain w-full h-full transition-opacity duration-500 opacity-100 rounded-xl ${
                       project.id !== 5 && "group-hover:opacity-0"

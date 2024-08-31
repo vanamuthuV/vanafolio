@@ -54,10 +54,18 @@ export const Home = () => {
           </button>
         </a>
       </div>
-      <div className="flex flex-col items-center justify-center w-8/12 h-full mt-10 max-md:pt-20 max-md:w-11/12">
-        <h1 className="text-6xl font-extrabold tracking-wide max-md:text-4xl">
+      <div className="flex flex-col items-center justify-center w-8/12 h-full mt-10 max-md:pt-16 max-md:w-11/12">
+        <h1 className="text-6xl font-extrabold tracking-wide text-center max-md:text-4xl max-md:hidden">
           HEY, I'M VANAMUTHU V
         </h1>
+        <div className="flex flex-col items-center justify-center md:hidden">
+          <p className="mb-1 text-6xl font-extrabold tracking-wide text-center max-md:text-4xl">
+            HEY, I'M
+          </p>
+          <p className="text-6xl font-extrabold tracking-wide text-center max-md:text-4xl">
+            VANAMUTHU V
+          </p>
+        </div>
         <div className="flex flex-row items-center justify-center gap-5 mt-10 md:hidden">
           <a href="https://www.linkedin.com/in/vanamuthuv">
             <button>
