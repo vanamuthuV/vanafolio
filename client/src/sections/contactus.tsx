@@ -16,7 +16,7 @@ export const ContactUs = () => {
 
   const [alert, setAlert] = useState<boolean>(false);
   const [alertmessage, setAlertMessage] = useState<AlertMessage>({
-    variant: 'info',
+    variant: "info",
     message: "",
   });
 
@@ -46,6 +46,9 @@ export const ContactUs = () => {
         }));
 
         setAlert(true);
+        name.current.value = "";
+        email.current.value = "";
+        messages.current.value = "";
       } catch (error: any) {
         console.log(error.message);
         setAlert(false);
